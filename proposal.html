@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proposal</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="proposal.css">
+</head>
+
+<body class="proposal-page">
+
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="proposal.html" class="active">Proposal</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Proposal Section -->
+  <section class="proposal-section">
+    <div class="proposal-container">
+      <div class="white-square">
+        <h2>My Proposal</h2>
+
+        <p>
+          I want to ask you something that’s been on my heart for days.
+          Ashley, will you take a chance with me and make this beautiful journey together?
+        </p>
+
+        <div class="button-container">
+          <!-- Each button has its own message -->
+          <button class="btn primary proposal-btn" data-message="You just clicked yes! Please take a screenshot and send it to your admirer ashley!">
+            Yes
+          </button>
+
+          <button class="btn outline proposal-btn" data-message="Great choice there ashley, and please don't put a lot of pressure in yourself with this decision, you can get all the time that you need okay? Screenshot it and send it to your admirer.">
+            I’ll think about it
+          </button>
+
+          <button class="btn secondary proposal-btn" data-message="I really understand your decision here and it's completely valid for you to say no to me, and here's an assurance ashley, you'll get the love that you're looking for. Knowing you ashley, you deserve it. Screenshot it and send it to your admirer.">
+            No
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- POPUP MODAL -->
+  <div class="popup-overlay" id="popupOverlay">
+    <div class="popup-box">
+      <p id="popupText">Popup text here</p>
+      <button class="btn primary" id="closePopup">Close</button>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 All Rights Reserved. A Website Made with Love</p>
+  </footer>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+</body>
+</html>

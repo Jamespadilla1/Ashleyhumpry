@@ -1,0 +1,212 @@
+/* General body styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure full height */
+}
+
+/* Flower background for the Proposal page */
+.proposal-page {
+  min-height: 100vh;
+  background-image: url('images/pinkrosesbackground.jpg'); /* Correct path to the background image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1; /* Allow the content to take up remaining space */ /* Full screen height */
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: #3e1c41; /* Deep romantic purple */
+  color: white;
+  padding: 15px 0;
+  width: 100%; /* Ensure navbar spans the full width */
+  position: fixed; /* Keep navbar fixed at the top */
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Ensure the navbar stays on top of other elements */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding-bottom: 5px;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+  color: #ff6f61; /* Romantic red */
+  border-bottom: 2px solid #ff6f61;
+}
+
+/* Proposal Section Styles */
+.proposal-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1; /* Allow the section to take the remaining space */
+  padding-top: 80px; /* Adjust for fixed navbar */
+  width: 100%;
+}
+
+/* Centering the White Card */
+.proposal-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.white-square {
+  background-color: white;
+  width: 80%;
+  max-width: 600px;
+  padding: 40px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading for "My Proposal" (Matching the homepage style) */
+.white-square h2 {
+  font-family: 'Great Vibes', cursive; /* Cursive font for elegance, matching the homepage */
+  font-size: 3rem; /* Same size as "Hi there Ashley" on homepage */
+  color: #3e1c41; /* Deep romantic purple */
+  text-align: center; /* Center-align the heading */
+  margin-bottom: 20px;
+}
+
+/* Paragraph */
+.white-square p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem; /* Adjusted font size */
+  color: #333;
+  margin-bottom: 30px;
+}
+
+/* Button Styles */
+.button-container {
+  display: flex;
+  justify-content: space-between; /* Align buttons horizontally */
+  gap: 20px; /* Add some spacing between buttons */
+  width: 100%;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-size: 1rem; /* Adjusted font size */
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.btn.primary {
+  background-color: #ff6f61;
+  color: white;
+}
+
+.btn.primary:hover {
+  background-color: #e05a4f;
+}
+
+.btn.outline {
+  background-color: transparent;
+  color: #ff6f61;
+  border: 2px solid #ff6f61;
+}
+
+.btn.outline:hover {
+  background-color: #ff6f61;
+  color: white;
+}
+
+.btn.secondary {
+  background-color: #f9e4f3;
+  color: #3e1c41;
+  border: 2px solid #3e1c41;
+}
+
+.btn.secondary:hover {
+  background-color: #3e1c41;
+  color: white;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #3e1c41;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  width: 100%; /* Ensure footer spans the full width */
+  margin-top: auto; /* Keep footer at the bottom */
+}
+
+/* =========================
+   POPUP MODAL STYLES
+========================= */
+
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 2000;
+}
+
+.popup-overlay.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.popup-box {
+  background-color: white;
+  padding: 30px 25px;
+  border-radius: 15px;
+  max-width: 420px;
+  width: 90%;
+  text-align: center;
+  animation: popupFade 0.3s ease;
+}
+
+.popup-box p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+@keyframes popupFade {
+  from {
+    transform: scale(0.85);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,197 @@
+/* =========================
+   GENERAL BODY STYLES
+========================= */
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f9e4f3;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+  background-color: #3e1c41;
+  padding: 15px 0;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+  color: #ff6f61;
+  border-bottom: 2px solid #ff6f61;
+}
+
+/* =========================
+   HERO SECTION (HYACINTH)
+========================= */
+
+.hero {
+  min-height: 100vh;
+  background-image: url("images/hyacinthbackground.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: 3.2rem;
+  font-family: 'Great Vibes', cursive;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.3rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* =========================
+   DASHBOARD SECTION
+========================= */
+
+.dashboard {
+  padding: 60px 20px;
+  background-color: white;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-family: 'Great Vibes', cursive;
+  color: #3e1c41;
+  margin-bottom: 40px;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.card {
+  background-color: white;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* =========================
+   ABOUT SECTION (LETTER BG)
+========================= */
+
+.about-section {
+  min-height: 100vh;
+  background-image: url("images/letterbackground.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  position: relative;
+  padding: 80px 20px;
+}
+
+/* soft overlay so text stays readable */
+.about-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 240, 245, 0.75);
+}
+
+.about-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+.about-heading {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3rem;
+  text-align: center;
+  color: #3e1c41;
+  margin-bottom: 30px;
+}
+
+.letter-container {
+  background-color: white;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.btn.primary {
+  display: inline-block;
+  margin-top: 20px;
+  background-color: #ff6f61;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 25px;
+  text-decoration: none;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  background-color: #3e1c41;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+}
